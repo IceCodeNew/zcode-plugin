@@ -2,6 +2,14 @@
 
 > A ZCode Plugin package that adds guided Nowledge Mem MCP tools and reusable Skills.
 
+## Automatic session-memory sync
+
+This release does **not** automatically sync ZCode conversations to Nowledge Mem. It does not capture the complete transcript at session end or before compaction. The current ZCode plugin contract does not expose a verified primary-session transcript export, `transcript_path`/`session_file` hook field, or a pre-compaction lifecycle contract that a plugin can use safely.
+
+The plugin supports MCP tools, Working Memory and Context Bundle guidance, memory and thread search, durable distillation, status checks, and a structured handoff when you explicitly request one. A handoff is a summary and does not preserve the full conversation.
+
+If automatic session-memory sync is your requirement, this release cannot provide it. Follow the upstream feature request for a stable ZCode session export and lifecycle contract after it is published in the feedback repository.
+
 ## What it provides
 
 After the plugin is enabled, ZCode can use the Nowledge Mem MCP server and these Skills:

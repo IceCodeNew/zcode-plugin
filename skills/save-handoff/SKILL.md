@@ -5,9 +5,9 @@ description: Save a concise, structured Nowledge Mem handoff when the ZCode user
 
 # Save Handoff
 
-Use this only when the user explicitly asks for a handoff, checkpoint, summary to resume later, or to remember where the work stands.
+Use this only when the user explicitly asks for a handoff, checkpoint, summary to resume later, or to remember where the work stands. This Skill does not automatically save a session when the conversation ends.
 
-This Skill creates a structured summary. It is **not** a full transcript import. ZCode's current Nowledge Mem integration has no verified transcript path or lifecycle contract, so do not call it `save-thread` and do not claim that the complete conversation was preserved.
+This Skill creates a structured summary. It is **not** a full transcript import or automatic session-memory sync. ZCode's current Nowledge Mem integration has no verified transcript path or lifecycle contract, so do not call it `save-thread` and do not claim that the complete conversation was preserved.
 
 ## Handoff format
 

@@ -11,4 +11,4 @@
 
 ### Not included
 
-- Automatic recall injection, automatic transcript capture, pre-compaction capture, and full `save-thread` import remain deferred until ZCode exposes a verified lifecycle and transcript contract.
+- Automatic session-memory synchronization, automatic recall injection, automatic transcript capture, pre-compaction capture, and full `save-thread` import remain unavailable until ZCode exposes a verified primary-session lifecycle and transcript export contract.
