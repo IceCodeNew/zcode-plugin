@@ -9,12 +9,16 @@ Run a quick health check when the user asks whether Mem is working, when an oper
 
 ```bash
 nmem --json status
+nmem --json stats
+nmem --json wm read
 ```
 
-Interpret the result briefly:
+Interpret these separately:
 
-- report reachability, mode, server version, and memory count when healthy;
-- if there is no briefing or data yet, distinguish that from a connection failure;
+- `status` reports reachability, mode, and server version;
+- `stats` reports database statistics and memory count when available;
+- `wm read` reports whether a Working Memory briefing exists;
+- no memories or no briefing is different from a connection failure;
 - do not print API keys or copy credentials into logs.
 
 The CLI check and ZCode MCP check are separate diagnostics. A remote or custom ZCode MCP endpoint can be healthy even when the local CLI is not configured for the same server.

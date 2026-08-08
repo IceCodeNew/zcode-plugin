@@ -147,11 +147,9 @@ Start Nowledge Mem Desktop and verify the CLI when using local mode:
 nmem --json status
 ```
 
-For Cloud, Access Anywhere, self-hosted, or another remote endpoint, configure the ZCode-owned MCP settings rather than editing the installed package:
+For Cloud, Access Anywhere, self-hosted, or another remote endpoint, configure the ZCode-owned MCP settings rather than editing the installed package. Keep the endpoint and credential in the user's secure Nowledge Mem client configuration or environment (`NMEM_API_URL` and `NMEM_API_KEY`), then generate the host-owned MCP block without putting the key in shell history:
 
 ```bash
-nmem config client set url https://mem.example.com
-nmem config client set api-key nmem_your_key
 nmem config mcp show --host zcode
 ```
 

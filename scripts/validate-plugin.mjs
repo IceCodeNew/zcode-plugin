@@ -88,10 +88,11 @@ function validateMcp(mcp) {
   if (!server || server.type !== "http") {
     throw new Error("nowledge-mem MCP server must use the ZCode http transport");
   }
-  requireString(server.url, "nowledge-mem.url");
-  const url = new URL(server.url);
-  if (!/^https?:$/.test(url.protocol)) {
-    throw new Error("nowledge-mem.url must use http or https");
+  if (server.url !== "http://127.0.0.1:14242/mcp/") {
+    throw new Error("nowledge-mem.url must use the local desktop endpoint");
+  }
+  if (!server.headers || Object.keys(server.headers).length !== 1 || server.headers.APP !== "ZCode") {
+    throw new Error('nowledge-mem.headers must be exactly {"APP":"ZCode"}');
   }
   const serialized = JSON.stringify(mcp).toLowerCase();
   for (const forbidden of ["api-key", "api_key", "authorization", "bearer", "password", "secret"]) {
