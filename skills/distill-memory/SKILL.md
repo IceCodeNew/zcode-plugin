@@ -41,4 +41,4 @@ nmem --json m add "<content>" -t "<title>" --unit-type "<unit_type>" --space "<s
 
 Replace `<unit_type>` with the validated type for this memory. Add `--label "<label>"` only when a label is known, and add `--importance <value>` only when importance is known. If no real ambient space is configured, omit `--space` and use the default lane.
 
-Use `nmem --json m update <memory_id> --content "<updated content>" --space "<space name>"` when an existing memory should evolve in a known ambient space; omit `--space` for the default lane. This CLI command is the fallback for MCP `memory_update`.
+Use `nmem --json m update <memory_id> --content "<updated content>" --space "<space name>"` when an existing memory should evolve in a known ambient space; omit `--space` for the default lane. This documented CLI command is the fallback for MCP `memory_update` when MCP is unavailable.
